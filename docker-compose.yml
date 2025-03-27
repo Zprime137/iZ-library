@@ -1,0 +1,11 @@
+version: "3"
+
+services:
+  iz-lib:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./output:/iz-lib/output
+    # You can override the command here or pass args to the default entrypoint
+    # command: ["-h"]  # Example: run with help flag
