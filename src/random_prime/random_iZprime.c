@@ -58,7 +58,7 @@ void search_p_in_iZm(mpz_t p, int matrix_id, mpz_t vx, int primality_check_round
     set_random_base(tmp, matrix_id, vx);
     mpz_set_ui(p, 0);
 
-    int attempts_limit = 10000;
+    int attempts_limit = 1000000;
 
     for (int i = 0; i < attempts_limit; i++)
     {
