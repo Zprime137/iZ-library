@@ -4,7 +4,7 @@
 
 The iZ-Framework is a comprehensive suite of efficient prime sieving and generation algorithms. Detailed in the accompanying paper (main.pdf), which is under submission for peer-review, this library presents novel methods that dramatically reduce the computational burden of prime sieving through continuous refinements to tackle persistent challenges for large-scale applications.
 
-Below are the key algorithms with benchmarks against well-optimized custom implementation of these algorithms:
+Below are the key algorithms with benchmarks against, well-optimized, custom implementation of these algorithms:
 
 - Sieve of Eratosthenes
 - Segmented Sieve
@@ -20,7 +20,7 @@ Focuses on numbers co-prime with 2 and 3 (i.e., numbers of the form $6x \pm 1$),
 **• Complexity:**
 
 - Space: $O(\frac{n}{3})$ bits,
-- Time: $O\left(\frac{n}{3} \log \log n\right)$.
+- Time: $O\left(\frac{n}{3} \ \log{\log{n}}\right)$.
 
 **• Benchmark Comparison:**
 
@@ -48,14 +48,20 @@ Processes the iZ-Matrix structure with a horizontal vector size defined as
 $$vx6 = 5 \times 7 \times 11 \times 13 \times 17 \times 19 = 1,616,615 \text{\ bits} \approx 0.2 \text{\ MB},$$
 spanning a numerical interval
 $$S = 6 \times vx6 = 9,699,690.$$
-It achieves linear bit complexity $O(n)$ with exceptional constant factors:
 
-- Approximately $\frac{1}{2}S$ rapid bitwise operations.
+**• Complexity:**
 
-- Approximately $\frac{4}{100}S$ primality testing operations.
+- It requires constant auxiliary space complexity $O(1)$.
 
-- Output Efficiency:
-Encodes prime gaps using a compact `uint16_t` array, significantly reducing output size for large datasets.
+- It achieves linear bit complexity $O(n)$ with exceptional constant factors:
+
+  - Approximately $\frac{1}{2}S$ rapid bitwise operations.
+
+  - Approximately $\frac{4}{100}S$ primality testing operations.
+
+**• Output Efficiency:**
+
+Encodes prime gaps using a compact `uint16_t` array, significantly reducing the output footprint for large datasets.
 
 **• Detailed Analysis:**
 
